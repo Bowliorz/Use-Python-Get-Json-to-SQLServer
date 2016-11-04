@@ -20,7 +20,7 @@ if row[0][0] == 1: #檢查資料表是否存在
 else:
     cursor.execute("CREATE TABLE %s (作物代號 nvarchar(5) not null, 作物名稱 nvarchar(20) null, 市場代號 int not null, 市場名稱 nvarchar(5) null, 交易日期 date not null, 平均價 float null)"%(crop))
     cnxn.commit()  #新增資料表
-    for y in range(101,106):
+    for y in range(101,106):#抓取民國101~105年的資料
         for a in range(2):
             if a == 1:
                 webData = requests.get( #設定json抓取網頁
