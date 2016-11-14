@@ -16,7 +16,7 @@ for i in root[0]:  #將資料欄名稱取出來
 creatTableSQL = columnCreate[0:-1] + ')'  #整理新增語法，最後的逗點不需要，加上右括號
 columnName = columnName[0:-1]  #最右邊逗點不需要
 
-cnxn = pypyodbc.connect('DRIVER={SQL Server}; SERVER=120.113.70.211; DATABASE=水資源; UID=sa; PWD=nfu123@@@')
+cnxn = pypyodbc.connect('DRIVER={SQL Server}; SERVER=IP; DATABASE=DATABASE; UID=username; PWD=password')
 cursor = cnxn.cursor()
 
 cursor.execute(creatTableSQL)
